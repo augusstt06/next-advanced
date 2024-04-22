@@ -12,7 +12,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body>
-        <ThemeProvider attribute="class">{children}</ThemeProvider>
+        <ThemeProvider attribute="class">
+          <header style={{ background: 'lightblue', padding: '1rem' }}>
+            <p>Header</p>
+          </header>
+          {children}
+          <footer style={{ background: 'gray', padding: '1rem' }}>
+            Footer
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   )
